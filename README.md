@@ -22,9 +22,10 @@ In `api/api.ts`, we have two 'endpoints'; `inviteCodeSignUp` and `partnerCodeSig
 
 ### Your Task
 
-Refactor `SignUp.tsx`, pulling out `PartnerCodeSignUp` to a new component. Ensure that it can call the `partnerCodeSignUp` api endpoint. We will need to be able to collect the right data to send to the endpoint.
+1. Refactor `SignUp.tsx`, pulling out `PartnerCodeSignUp` to a new component.
+2. Update our partner code sign up flow, to call the `partnerCodeSignUp` api endpoint, with the required properties found in `PartnerCodeSignUpValues`.
 
-Please think about form validation and handling any errors you might receive from the API.
+> Please think about form validation and handling any errors you might receive from the API.
 
 ### Stretch Goal & Discussion
 

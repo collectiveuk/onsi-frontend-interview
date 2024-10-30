@@ -65,7 +65,7 @@ export const SignUp = () => {
           partnerName={partnerName || ""}
           partnerCode={partnerCode || ""}
           onSubmit={() => {
-            navigate(`/success`);
+            alert("Not implemented!");
           }}
         />
       )}
