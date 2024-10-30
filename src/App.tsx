@@ -29,6 +29,8 @@ function App() {
             </div>
           )}
         />
+
+        <Route path="*" Component={() => <div>404, page not found!</div>} />
       </Routes>
     </BrowserRouter>
   );

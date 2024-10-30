@@ -24,6 +24,7 @@ export const Step2SignUp: FC<Step2SignUpProps> = ({
         <input
           value={data?.firstName}
           name="firstName"
+          autoComplete="given-name"
           onChange={(event) => {
             onChangeName(event?.target?.value);
           }}
@@ -33,6 +34,7 @@ export const Step2SignUp: FC<Step2SignUpProps> = ({
         <input
           value={data?.lastName}
           name="lastName"
+          autoComplete="family-name"
           onChange={(event) => {
             onChangeSurname(event?.target?.value);
           }}
@@ -42,6 +44,7 @@ export const Step2SignUp: FC<Step2SignUpProps> = ({
         <input
           type="date"
           name="dob"
+          autoComplete="bday"
           value={data.dob}
           onChange={(event) => {
             onChangeBirth(event?.target?.value);

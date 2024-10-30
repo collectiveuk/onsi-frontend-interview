@@ -23,6 +23,7 @@ export const Step1SignUp: FC<Step1SignUpProps> = ({
         <label htmlFor="email">Email</label>
         <input
           name="email"
+          autoComplete="email"
           value={data?.email}
           onChange={(event) => {
             onChangeEmail(event?.target?.value);
@@ -33,6 +34,7 @@ export const Step1SignUp: FC<Step1SignUpProps> = ({
         <input
           name="password"
           type="password"
+          autoComplete="new-password"
           value={data?.password}
           onChange={(event) => {
             onChangePassword(event?.target?.value);

@@ -36,8 +36,8 @@ export const SignUp = () => {
     inviteCode: inviteCode || "",
   });
 
-  const handleOnSubmit = async () => {
-    await inviteCodeSignUp({
+  const handleOnSubmit = () => {
+    inviteCodeSignUp({
       email: data.email,
       dob: data.dob,
       firstName: data.firstName || "",
@@ -89,8 +89,8 @@ export const SignUp = () => {
             handleOnSubmit();
           }}
           onChangeBirth={(value) => handleOnChange(value, "birth")}
-          onChangeName={(value) => handleOnChange(value, "name")}
-          onChangeSurname={(value) => handleOnChange(value, "surname")}
+          onChangeName={(value) => handleOnChange(value, "firstName")}
+          onChangeSurname={(value) => handleOnChange(value, "lastName")}
         />
       )}
     </div>
