@@ -23,7 +23,10 @@ export type PartnerCodeSignUpValues = {
 
 export function partnerCodeSignUp(data: PartnerCodeSignUpValues) {
   if (data.partnerCode !== "CORRECT_CODE") {
-    throw new Error("Invalid code.");
+    return {
+      status: 400,
+      message: "Invalid partner code",
+    };
   }
 
   return {

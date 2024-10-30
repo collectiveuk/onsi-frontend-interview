@@ -4,7 +4,7 @@ Thanks for taking the time to interview with us, we are looking forward to worki
 
 ## Getting started
 
-This is a React project build with Create React App. It uses Typecript and React Router. To get set up:
+This is a React project build with Create React App. It uses Typescript and React Router. To get set up:
 
 1. `nvm use`
 2. `npm install`
