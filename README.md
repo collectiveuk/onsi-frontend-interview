@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# Onsi Frontend Interview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Thanks for taking the time to interview with us, we are looking forward to working together over the next hour.
 
-## Available Scripts
+## Getting started
 
-In the project directory, you can run:
+This is a React project build with Create React App. It uses Typecript and React Router. To get set up:
 
-### `npm start`
+1. `nvm use`
+2. `npm install`
+3. `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+At this point, you should see a welcome page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Instructions
 
-### `npm test`
+Your task for today will require you to work with some existing code that needs refactoring. In `App.tsx` you will see two sign up routes: `/sign-up/partner/:partnerName/code/:partnerCode` and `/sign-up/:inviteCode`. Both routes point to the same `SignUp` component.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+When you look at the `SignUp` component, you will see that it is consuming 3 route parameters via the `useParams` hook. This is not ideal, as the sign up routes exist to perform different operations.
 
-### `npm run build`
+In `api/api.ts`, we have two 'endpoints'; `inviteCodeSignUp` and `partnerCodeSignUp`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Your Task
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Refactor `SignUp.tsx`, pulling out `PartnerCodeSignUp` to a new component, and ensure that it can call the `partnerCodeSignUp` api endpoint. We will need to ensure we are able to collect the right data to send to the endpoint.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Please think about form validation and handling any errors you might receive from the API.
 
-### `npm run eject`
+### Stretch Goal & Discussion
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you have time, it would be great to think about how you could continue to refactor the `SignUp.tsx` file, and its child components.
