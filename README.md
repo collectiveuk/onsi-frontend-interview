@@ -22,10 +22,10 @@ In `api/api.ts`, we have two 'endpoints'; `inviteCodeSignUp` and `partnerCodeSig
 
 ### Your Task
 
-Refactor `SignUp.tsx`, pulling out `PartnerCodeSignUp` to a new component, and ensure that it can call the `partnerCodeSignUp` api endpoint. We will need to ensure we are able to collect the right data to send to the endpoint.
+Refactor `SignUp.tsx`, pulling out `PartnerCodeSignUp` to a new component. Ensure that it can call the `partnerCodeSignUp` api endpoint. We will need to be able to collect the right data to send to the endpoint.
 
 Please think about form validation and handling any errors you might receive from the API.
 
 ### Stretch Goal & Discussion
 
-If you have time, it would be great to think about how you could continue to refactor the `SignUp.tsx` file, and its child components.
+If you have time, it would be great to think about how you could continue to refactor the `SignUp.tsx` file and its child components.
