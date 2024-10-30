@@ -88,7 +88,7 @@ export const SignUp = () => {
           onSubmitFinish={() => {
             handleOnSubmit();
           }}
-          onChangeBirth={(value) => handleOnChange(value, "birth")}
+          onChangeBirth={(value) => handleOnChange(value, "dob")}
           onChangeName={(value) => handleOnChange(value, "firstName")}
           onChangeSurname={(value) => handleOnChange(value, "lastName")}
         />

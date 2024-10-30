@@ -3,7 +3,7 @@ import { MemberSignUpValues } from "../../api/api";
 
 type Step2SignUpProps = {
   data: MemberSignUpValues;
-  onChangeBirth(newValue: any): void;
+  onChangeBirth(newValue: string): void;
   onChangeName(newValue: string): void;
   onChangeSurname(newValue: string): void;
   onSubmitFinish(): void;
@@ -47,6 +47,7 @@ export const Step2SignUp: FC<Step2SignUpProps> = ({
           autoComplete="bday"
           value={data.dob}
           onChange={(event) => {
+            console.log(event?.target?.value);
             onChangeBirth(event?.target?.value);
           }}
         />
