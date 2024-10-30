@@ -8,7 +8,7 @@ This is a React project build with Create React App. It uses Typecript and React
 
 1. `nvm use`
 2. `npm install`
-3. `npm start`
+3. `npm run dev`
 
 At this point, you should see a welcome page.
 
