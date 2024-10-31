@@ -15,33 +15,36 @@ export const TaxCalculator = () => {
 
   const netAmount = (
     percent: number,
-    rest: Pair<number, string>[],
+    pairs: Pair<number, string>[],
   ): Pair<number, string> => {
-    if (!rest.length) {
+    if (!pairs.length) {
       return { first: 0, second: "GBP" };
     }
 
-    let [first, ...pairs] = rest;
+    let [first, ...rest] = pairs;
 
     let total: Pair<number, string> = first;
 
-    for (let next of pairs) {
+    for (let next of rest) {
       if (next.second != total.second) {
         throw new Error();
       }
     }
 
-    for (let next of pairs) {
+    for (let next of rest) {
       total = {
         first: total.first + next.first,
         second: next.second,
       };
     }
 
-    let tax = total.first * (percent / 100);
+    let tax = {
+      first: (total.first * percent) / 100,
+      second: total.second,
+    };
 
     return {
-      first: total.first - tax,
+      first: total.first - tax.first,
       second: total.second,
     };
   };
