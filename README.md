@@ -20,6 +20,8 @@ Remember, we're more interested in your thought process and how you communicate 
 
 Let's dive in and see how we can improve this tax calculator together!
 
+![screenshot of calculator](screenshot.png "Take home calculator")
+
 ## Get Started
 
 Before we get started, please make sure you've done the following steps:
