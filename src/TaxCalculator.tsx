@@ -15,7 +15,7 @@ export const TaxCalculator = () => {
 
   const netAmount = (
     percent: number,
-    rest: Pair<number, string>[]
+    rest: Pair<number, string>[],
   ): Pair<number, string> => {
     if (!rest.length) {
       return { first: 0, second: "GBP" };
