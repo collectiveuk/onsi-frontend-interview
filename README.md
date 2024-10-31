@@ -1,32 +1,29 @@
-# Onsi Frontend Interview
+# Onsi Pair Programming Exercise
 
-Thanks for taking the time to interview with us, we are looking forward to working together over the next hour.
+This exercise is designed as a pair programming session. Here are some key points to keep in mind:
 
-## Getting started
+- We're here to collaborate, not to judge. Feel free to think out loud, ask questions, and share your thoughts.
+- Don't hesitate to seek clarification or assistance. We're here to support you throughout the process.
+- This is a conversation as much as it is a coding exercise. We want to see how you approach problems and communicate your ideas.
 
-This is a React project build with Create React App. It uses Typescript and React Router. To get set up:
+## Context
 
-1. `nvm use`
-2. `npm install`
-3. `npm run dev`
+Let's set the scene: We're working through our codebase and we've stumbled upon this legacy tax calculator (`TaxCalculator.tsx`). While it's functional and has tests in place, the code is quite messy and could use some improvements. Our task is to refactor this code, considering the following:
 
-At this point, you should see a welcome page.
+1. Improve overall structure and readability
+2. Better handle edge cases
+3. Enhance maintainability for future updates
 
-## Instructions
+We'll be working on this together for a 30-minute time box. The goal is not necessarily to complete everything, but to make meaningful progress and demonstrate your problem-solving approach.
 
-Your task for today will require you to work with some existing code that needs refactoring. In `App.tsx` you will see two sign up routes: `/sign-up/partner/:partnerName/code/:partnerCode` and `/sign-up/:inviteCode`. Both routes point to the same `SignUp` component.
+Remember, we're more interested in your thought process and how you communicate your ideas than in achieving a perfect solution in the limited time.
 
-When you look at the `SignUp` component, you will see that it is consuming 3 route parameters via the `useParams` hook. This is not ideal, as the sign up routes exist to perform different operations.
+Let's dive in and see how we can improve this tax calculator together!
 
-In `api/api.ts`, we have two 'endpoints'; `inviteCodeSignUp` and `partnerCodeSignUp`.
+## Get Started
 
-### Your Task
+Before we get started, please make sure you've done the following steps:
 
-1. Refactor `SignUp.tsx`, pulling out `PartnerCodeSignUp` to a new component.
-2. Update our partner code sign up flow, to call the `partnerCodeSignUp` api endpoint, with the required properties found in `PartnerCodeSignUpValues`.
-
-> Please think about form validation and handling any errors you might receive from the API.
-
-### Stretch Goal & Discussion
-
-If you have time, it would be great to think about how you could continue to refactor the `SignUp.tsx` file and its child components.
+- `npm install`
+- `npm run dev` to run in your browser
+- `npm run test` to make sure your tests pass

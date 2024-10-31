@@ -73,6 +73,7 @@ export const TaxCalculator = () => {
           max="100"
           name="percent"
           value={percent}
+          aria-label="percent"
           onChange={(e) => setPercent(Number(e.target?.value))}
         />
 
@@ -82,6 +83,7 @@ export const TaxCalculator = () => {
             name="currency"
             value={currency}
             onChange={(e) => setCurrency(e.target.value)}
+            aria-label="currency"
           >
             <option value="GBP">GBP</option>
             <option value="USD">USD</option>
@@ -92,6 +94,7 @@ export const TaxCalculator = () => {
             name="amount"
             type="number"
             value={amount}
+            aria-label="amount"
             onChange={(e) => setAmount(Number(e.target.value))}
           />
 
