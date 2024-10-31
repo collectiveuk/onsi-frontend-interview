@@ -47,52 +47,73 @@ export const TaxCalculator = () => {
   };
 
   return (
-    <div>
-      <h1>Calculator</h1>
+    <div className="prose m-8">
+      <h1>Tax Calculator</h1>
       <form
+        className="flex flex-col gap-4"
         onSubmit={(e) => {
           e.preventDefault();
 
           setPairs([...pairs, { first: amount, second: currency }]);
+
+          setAmount(0);
         }}
       >
+        <p>
+          Enter multiple amounts, and a percentage, tool will calculate the net
+          amount and the tax.
+        </p>
+        <h4>Tax Percentage (0-100)</h4>
         <input
           type="text"
+          min="0"
+          max="100"
           name="percent"
           value={percent}
           onChange={(e) => setPercent(Number(e.target?.value))}
         />
 
-        <select
-          name="currency"
-          value={currency}
-          onChange={(e) => setCurrency(e.target.value)}
-        >
-          <option value="GBP">GBP</option>
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-        </select>
+        <h4>Add Amount</h4>
+        <div className="flex flex-row gap-4">
+          <select
+            name="currency"
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value)}
+          >
+            <option value="GBP">GBP</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
 
-        <input
-          name="amount"
-          type="number"
-          value={amount}
-          onChange={(e) => setAmount(Number(e.target.value))}
-        />
+          <input
+            name="amount"
+            type="number"
+            value={amount}
+            onChange={(e) => setAmount(Number(e.target.value))}
+          />
 
-        <button type="submit">Add</button>
+          <button
+            type="submit"
+            className="px-4 py-2 bg-lime-600 text-white font-bold"
+          >
+            Add
+          </button>
+        </div>
       </form>
 
+      <h4>Current amounts</h4>
       <ul>
-        {pairs.map((pair, index) => (
-          <p key={`${pair.first}${index}`}>
-            {pair.second} {pair.first}
-          </p>
-        ))}
+        {pairs.length
+          ? pairs.map((pair, index) => (
+              <li className="list-disc" key={`${pair.first}${index}`}>
+                {pair.first} ({pair.second})
+              </li>
+            ))
+          : "No amounts"}
       </ul>
-
+      <h4>Totals</h4>
       <p>
-        Total:{" "}
+        Net Amount:{" "}
         {`${netAmount(percent, pairs).first} ${
           netAmount(percent, pairs).second
         }`}
