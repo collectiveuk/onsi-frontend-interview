@@ -5,8 +5,6 @@ describe("TaxCalculator", () => {
   test("Should be able to sum 10GBP and 20GBP", async () => {
     render(<TaxCalculator />);
 
-    screen.debug();
-
     const amountInput = screen.getByRole("spinbutton", { name: /amount/i });
     const currencyInput = screen.getByRole("combobox", { name: /currency/i });
 
