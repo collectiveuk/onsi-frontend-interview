@@ -18,7 +18,7 @@ We'll be working on this together for a 30-minute time box. The goal is not nece
 
 Remember, we're more interested in your thought process and how you communicate your ideas than in achieving a perfect solution in the limited time.
 
-Let's dive in and see how we can improve this tax calculator together!
+Let's dive in and see how we can improve this tax calculator together.
 
 ![screenshot of calculator](screenshot.png "Tax Calculator")
 
